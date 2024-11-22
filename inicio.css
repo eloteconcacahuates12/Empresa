@@ -22,7 +22,7 @@ header .header-container {
 }
 
 header .logo {
-    height: 80px;
+    height: 100px;
     margin-right: 35px;
 }
 
@@ -141,8 +141,8 @@ main {
 
 /* Footer */
 footer {
-    background-color: #2a9d8f;
-    color: #fff;
+    background-color: #f7bf57;
+    color: #000000;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
