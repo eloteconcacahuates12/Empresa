@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="iconosdb.png" type="image/x-icon">
+    <link rel="icon" href="iconosdb.png" type="image/x-icon" class="x-icon">
     <link href="inicio.css" rel="stylesheet">
     <title>SDB - Salud Da Belleza</title>
 </head>
@@ -134,9 +134,9 @@
         </section>
     </main>
 
-    <!-- Galería -->
+    <!-- Galería--> 
     <section id="gallery" class="gallery">
-        <h2>Galería</h2>
+        <center><h2>Galería</h2></center>
         <div class="carousel">
             <div class="carousel-container">
                 <!-- Aquí se aplicará la animación para desplazar las imágenes -->
@@ -162,34 +162,44 @@
 
 
     <!-- Footer -->
-    <footer id="contact">
-        <p>Dirección: Callejón Longoria, Cd. México, Estado: Tamaulipas</p>
-        <p>Teléfono: 89993384563</p>
-        <p>Facebook: SDB Salud Da Belleza</p>
-        <p>Correo: saluddabellezasdb@gmail.com</p>
+<footer id="contact">
+    <p>Dirección: Callejón Longoria, Cd. México, Estado: Tamaulipas</p>
+    <p>Teléfono: 89993384563</p>
+    <p>Facebook: SDB Salud Da Belleza</p>
+    <p>Correo: saluddabellezasdb@gmail.com</p>
 
-<!-- Scripts -->
+    <!-- Contenedor para el mapa -->
+    <div id="map" style="width: 100%; height: 400px;"></div>
+</footer>
+
+<!-- Script de Google Maps -->
+<script>
+    function initMap() {
+        const location = { lat: 26.099907, lng: -98.292561 }; // Coordenadas de la ubicación
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: location,
+        });
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title: "Salud Da Belleza",
+        });
+
+        // Evento de clic en el marcador
+        marker.addListener("click", () => {
+            window.open(`https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`, "_blank");
+        });
+    }
+</script>
+
+<!-- Cargar la API de Google Maps -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyHvqP3cGWtIrDVUAJkVcxlcjRYC5XnB8&callback=initMap">
+</script>
+
+
     <script src="carrito.js"></script>
     <script src="carrusel.js"></script>
-    <script>
-        function initMap() {
-            const location = { lat: 26.099907, lng: -98.292561 };
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 15,
-                center: location,
-            });
-            const marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                title: "Salud Da Belleza",
-            });
-            marker.addListener("click", () => {
-                window.open(`https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`, "_blank");
-            });
-        }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyHvqP3cGWtIrDVUAJkVcxlcjRYC5XnB8&callback=initMap">
-    </script>
 </body>
 </html>

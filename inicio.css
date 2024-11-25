@@ -1,5 +1,5 @@
 /* General Reset */
-.cart-icon{
+.x-icon {
     border-radius: 50%;
 }
 
@@ -272,6 +272,7 @@ footer {
 }
 
 /* Estilos del carrusel */
+
 .carousel {
     position: relative;
     overflow: hidden;
