@@ -8,9 +8,9 @@ body {
 
 /* logo y inicio */
 header {
-    background-color: #000000fa;
+    background-color: #000000;
     color: #f7bf57;
-    padding: 30px 40px;
+    padding: 60px 70px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -22,13 +22,14 @@ header .header-container {
 }
 
 header .logo {
-    height: 100px;
+    height: 180px;
     margin-right: 35px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 4.5em;
+    
 }
 
 /* Navigation Menu */
@@ -263,4 +264,65 @@ footer {
 
 .add-to-cart:hover {
     background-color: #3e8e41;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Botones del carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Encabezado de la galería */
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #264653;
+    font-size: 1.8em;
 }
