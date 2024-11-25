@@ -269,42 +269,37 @@ footer {
 /* Estilos del carrusel */
 .carousel {
     position: relative;
-    max-width: 800px;
-    margin: 20px auto;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
 }
 
 .carousel-slide {
     min-width: 100%;
+    box-sizing: border-box;
 }
 
 .carousel-slide img {
     width: 100%;
     display: block;
-    border-radius: 10px;
 }
 
-/* Botones del carrusel */
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    font-size: 2rem;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
-    z-index: 1;
-    border-radius: 50%;
+    z-index: 10;
 }
 
 .carousel-button.prev {
@@ -316,13 +311,5 @@ footer {
 }
 
 .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Encabezado de la galería */
-.gallery h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #264653;
-    font-size: 1.8em;
+    background: rgba(0, 0, 0, 0.8);
 }
