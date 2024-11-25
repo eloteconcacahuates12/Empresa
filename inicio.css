@@ -1,4 +1,8 @@
 /* General Reset */
+.cart-icon{
+    border-radius: 50%;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -38,6 +42,7 @@ nav .menu {
     padding: 0;
     margin: 10px 0 0;
     display: flex;
+    font-size: 22px;
     justify-content: center;
     gap: 20px;
 }
@@ -65,20 +70,20 @@ nav .menu a:hover, nav .menu span:hover {
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #f7bf57;
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 22px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #000000;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -95,7 +100,7 @@ nav .menu a:hover, nav .menu span:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f5d498;
 }
 
 .dropdown:hover .dropdown-content {
