@@ -273,39 +273,40 @@ footer {
 
 /* Estilos del carrusel */
 
+/* Estilo general del carrusel */
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 800px;
-    margin: auto;
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .carousel-slide {
     min-width: 100%;
-    box-sizing: border-box;
+    transition: opacity 1s ease;
 }
 
-.carousel-slide img {
-    width: 100%;
-    display: block;
+/* Estilos para las imágenes del carrusel */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%; /* Establecer el tamaño de las imágenes */
+    margin: auto; /* Centra las imágenes dentro de su contenedor */
 }
 
+/* Estilos para los botones del carrusel */
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
+    font-size: 24px;
+    padding: 10px;
 }
 
 .carousel-button.prev {
@@ -314,8 +315,4 @@ footer {
 
 .carousel-button.next {
     right: 10px;
-}
-
-.carousel-button:hover {
-    background: rgba(0, 0, 0, 0.8);
 }
